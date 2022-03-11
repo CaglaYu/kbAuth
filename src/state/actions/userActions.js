@@ -40,6 +40,7 @@ export const login = (email, password) => async (dispatch) => {
 
 export const logout = () => (dispatch) => {
 	try {
+		localStorage.removeItem("_expiredTime");
 		userApi.defaults.headers.common["Authorization"] = null;
 		
 		dispatch({

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../state/actions/userActions";
 
@@ -18,7 +18,7 @@ const Logout = () => {
       
   }, [ dispatch]);
   useEffect(() => {
-    
+    console.log("ggggdfsf")
     navigate("/");
     
 }, [ navigate]);

@@ -25,6 +25,7 @@ export const accountService = {
 };
 
 function login(email, password) {
+    
     return fetchWrapper.post(`${baseUrl}/authenticate`, { email, password })
         .then(user => {
             // publish user to subscribers and start timer to refresh token

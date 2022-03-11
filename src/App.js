@@ -8,6 +8,7 @@ import Logout from "./Components/Logout";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Home from './Components/Home';
+
 function App() {
     return (
         <Provider store={store}>

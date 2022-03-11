@@ -10,12 +10,18 @@ import '../assets/styles/Main.css';
 import { accountService, alertService } from '../services';
 import Navbar from './NavbarUser';
 import NavbarGuest from './NavbarGuest';
+import {  useSelector } from "react-redux";
 
 function Register({ history }) {
-  const isUser = accountService.userValue;
+  const { accessToken: userToken } = useSelector(
+    (state) => state.userDetails
+  );
   const MyBar = () => {
 
-    if (isUser) {
+    
+    
+  
+      if (userToken) {
 
       return (<Navbar />)
     }
