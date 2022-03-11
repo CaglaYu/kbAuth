@@ -75,7 +75,7 @@ function Register({ history }) {
 
   return (
     <>
-      {/*<MyBar/>  */}
+    <MyBar/>  
       <div className=" background">
         <div className="flex content-center  justify-center">
           <div className="w-full lg:w-4/12 px-4 mt-4">

@@ -10,7 +10,7 @@ import Navbar from './NavbarUser';
 import NavbarGuest from './NavbarGuest';
 import IdleTimer from "_helpers/idleTimer";
 const Home = ({ history }) => {
-    const { user, accessToken } = useSelector(
+    const { user } = useSelector(
         (state) => state.userDetails
 
     );
@@ -19,7 +19,7 @@ const Home = ({ history }) => {
     useEffect(() => {
         if (user) {
             const timer = new IdleTimer({
-                timeout: 4, //expire after 10 seconds
+                timeout: 3600, //expire after 1 hour
                 onTimeout: () => {
                     setIsTimeout(true);
                 },
