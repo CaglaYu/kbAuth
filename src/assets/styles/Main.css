@@ -32,21 +32,14 @@
     
 }
 .btn-sub:hover {
-  background-color: #6b3110;
-  color: #ffffff;
+  
+  color: #aaaaaa;
 }
 .btn-sub {
-  background-color: #f88d13;
-  margin-top: 0.4em;
-  -moz-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-  color: #2a5a51;
-  margin: 0.01vw;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
   
-  font-weight: 600;    
+  
+  margin: 0.3vw;
+  
   margin-right: 0.2em;
 }
 .kayd{
@@ -68,10 +61,16 @@
 .MuiBox-root, .grid0{
     margin-left: 2vw;
 }
-.grid11 {
+.grid12 {
   display: grid;
   
   grid-template-columns: 12em 12em;
+  
+}
+.grid11 {
+  display: grid;
+  
+  grid-template-columns: 30em 30em;
   
 }
 .accIconIns{

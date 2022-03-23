@@ -1,5 +1,5 @@
 import { userApi } from "../../config/apiHelper";
-
+import {  alertService } from '../../services';
 import {
 	USER_LOGIN_REQUEST,
 	USER_LOGIN_SUCCESS,
@@ -13,6 +13,7 @@ import {
 // logging in
 export const login = (email, password) => async (dispatch) => {
 	try {
+		alertService.clear();
 		dispatch({
 			type: USER_LOGIN_REQUEST,
 		});
@@ -21,12 +22,14 @@ export const login = (email, password) => async (dispatch) => {
 			email,
 			password,
 		});
-
+		
 		dispatch({
 			type: USER_LOGIN_SUCCESS,
 			payload: data,
 		});
 	} catch (error) {
+		
+		alertService.error(error.response.data.error);
 		dispatch({
 			type: USER_LOGIN_FAIL,
 			payload:
